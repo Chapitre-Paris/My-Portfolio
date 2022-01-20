@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+:root {
+  --main-bg-color: #6b7379;
+  --font-color: #ffffff;
+  --highlight-color: #d7f205;
+  --dark-color: #0b1014;
+  --title-font: "Roboto Mono", monospace;
+  --subtitle-font: "Open Sans", sans-serif;
+  --paragraph-font: "Cabin", sans-serif;
+  --logo-font: "Libre Baskerville", serif;
+}
+body {
+  background-color: var(--main-bg-color);
+  color: var(--font-color);
+  font-family: var(--subtitle-font);
+}
+
+/*---------------------NAV BAR STYLING---------------------*/
+.nav-bar {
+  max-width: calc(100% / 12 12);
+  /*soit cette ligne pour definir le max width soit l'avant*/
+  max-width: 1400px;
+  margin: auto;
+  padding: 4rem 1rem;
+}
+.nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 3rem;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  display: block; /*since this is clickable we want our element to occupy the whole space when we hover on it and not just the text*/
+  font-weight: 300;
+}
+.nav-bar a:hover {
+  color: var(--dark-color);
+  transition: 0.4s;
+}
+
+.nav-bar [class*="fa-"] {
+  font-size: 150%;
+  color: var(--highlight-color);
+}
+.nav-bar [class*="fa-"]:hover {
+  color: var(--dark-color);
+  transition: 0.4s;
+}
+.nav-bar .resume {
+  background-color: var(--dark-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.nav-bar .resume:hover {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: var(--font-color);
+}
+.nav-bar .logo {
+  flex-basis: 100%;
+  text-align: center; /*this is what center my logo */
+}
+.logo h1 a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-bar .logo [class*="fa-"] {
+  font-size: 120%;
+}
+@media (min-width: 850px) {
+  .nav-bar .logo {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+}
+
+/*---------------------BRANDING SECTION STYLING---------------------*/
+.branding-section {
+  max-width: 1400px;
+  height: 100vh;
+  padding: 4rem 1rem 10rem 1rem;
+  margin: auto;
+}
+.branding-section .my-name {
+  display: block;
+  padding: 2rem 0;
+  font-size: 4rem;
+  color: var(--highlight-color);
+  font-family: var(--title-font);
+}
+.branding-section .job-title {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  font-family: var(--title-font);
+}
+.branding-section p {
+  padding: 0.5rem 0;
+  font-size: 120%;
+  font-weight: lighter;
+}
