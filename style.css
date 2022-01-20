@@ -17,9 +17,11 @@ body {
   background-color: var(--main-bg-color);
   color: var(--font-color);
   font-family: var(--subtitle-font);
+  font-weight: lighter;
 }
 
 /*---------------------NAV BAR STYLING---------------------*/
+
 .nav-bar {
   max-width: calc(100% / 12 12);
   /*soit cette ligne pour definir le max width soit l'avant*/
@@ -83,13 +85,13 @@ body {
   }
 }
 
-/*---------------------BRANDING SECTION STYLING---------------------*/
-.branding-section {
+section {
   max-width: 1400px;
   height: 100vh;
   padding: 4rem 1rem 10rem 1rem;
   margin: auto;
 }
+/*---------------------BRANDING SECTION STYLING---------------------*/
 .branding-section .my-name {
   display: block;
   padding: 2rem 0;
@@ -106,4 +108,72 @@ body {
   padding: 0.5rem 0;
   font-size: 120%;
   font-weight: lighter;
+}
+
+/*---------------------PROJECTS SECTION STYLING---------------------*/
+.projects-section-background {
+  height: 100vh;
+}
+.projects-section h2 {
+  font-size: 2.5rem;
+}
+.project-title {
+  color: var(--highlight-color);
+  font-family: var(--title-font);
+  font-weight: lighter;
+}
+.project-description-title {
+  font-family: var(--subtitle-font);
+  font-weight: lighter;
+}
+.project-description {
+  background-color: var(--dark-color);
+  padding: 1rem;
+  max-width: 80%;
+  border-radius: 7px;
+  text-align: right;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.project-technologies {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.reverted .project-technologies {
+  justify-content: flex-start;
+}
+.projects-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.projects-text-layout {
+  text-align: right;
+  grid-column: 3/13;
+  grid-row: 1/2;
+}
+
+.projects-layout img {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  width: 100%;
+  margin: 2rem 0 4rem 0;
+  border: white 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.reverted img {
+  grid-column: 8/13;
+  grid-row: 1/2;
+}
+.reverted .projects-text-layout {
+  text-align: left;
+  grid-column: 1/11;
+  grid-row: 1/2;
+}
+.reverted .project-description {
+  margin-left: 0;
+  text-align: left;
 }
